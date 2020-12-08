@@ -34,7 +34,11 @@ textarea{
 .row {
   white-space: pre-wrap;
   height: 80px;
-  border-top: 1px solid white;;
+  /* was white, I changed to see */
+  border-top: 1px solid black;  
+  /* border-color: #000000;
+  border-style: solid; */
+
 }
 
 .hour {
@@ -69,4 +73,13 @@ textarea{
 .saveBtn i:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
+}
+
+
+
+/* added for testing  */
+
+.container {
+  border-color: #000000;
+  border-style: solid;
 }

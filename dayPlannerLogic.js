@@ -14,4 +14,26 @@ var formatDate = dayjs().format('dddd, MMMM D YYYY'+','+' h'+':'+'mm A');
 today.text(formatDate);  
 
 
+// add the slotted times for 9am to 5pm
+// loop thru, format the dayjs time and render the html rows
+timeArray = [];
+function makeRowsAndFill() {
+    var makeRow;
+    for (var i = 0; i < 9; i++) {
+        var hour = dayjs().hour(i +9).format("h mm A");
+        console.log(hour)
+        // var hour = dayjs().format('dddd, MMMM DD YYYY');
+        timeArray.push(hour);
+        console.log(timeArray);
+        makeRow = $("<div>").addClass("row time-block")
+        $(".container").append(makeRow);
+    };
+    // using bootstrap & jquerty to generate the rows
+    // function fillRows(){
+    //     makeRow = $("<div>").addClass("row time-block")
+    //     $(".container").append(makeRow);
+    // }
+    // fillRows()
+};
 
+makeRowsAndFill();
