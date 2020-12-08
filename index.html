@@ -34,6 +34,14 @@
     
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script> -->
+    
+
+    <!-- Using dayjs - momentJS not supported anymore - chose dayjs since most adisory that's its closet to moment.js  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.9.7/dayjs.min.js" integrity="sha512-kZ+x2gdehn6OZMWZSp3Vt5R+v9hQTYEATQwaUfWquhxbvNVAy6IRtYs7asdyxKUTqG0I5ZqBqnzcBrpnHJCAGw==" crossorigin="anonymous"></script>
+    <!-- Included dayjs.min locally on server if CDN not available -->
+    <script src="dayjs.min.js"></script>
+    <!-- javascript implemented to show dayjs calendar  -->
+    <script src="dayPlannerLogic.js"></script>
   </body>
 </html>
