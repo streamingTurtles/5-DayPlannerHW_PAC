@@ -52,26 +52,22 @@ makeRowsAndFill();
 
 
 
-// 
+// function to style the text sections with color classes representing past, present & future time slots 
 function timeCheckForColorShow (){
-    var nowHour = dayjs().format('h');
-    var amOrpm  = dayjs().format('a');
-    var changeColor;
-    console.log('current Hour is: ', nowHour + ' AM or PM? ', amOrpm); // using for if else condition for style coloring
-        $.each(timeArray, function(i, value){
-            if ( (amOrpm == 'am') && (nowHour < 9) ){
-                // all the rows are gray - its late in the evening into the early morning hours before 9 am.
-                console.log('The time is: ', nowHour, amOrpm + ' - so we are not between 9am - 5pm and all rows are grey');
-                console.log("#rows"+i);
-                console.log('#text'+i);
-                $("#text"+i).addClass("rowGray");
-            } else {
-
-            }    
-
-        });    
+    var nowHour = dayjs().format('h'); // for testing 
+    var amOrpm  = dayjs().format('a'); // for testing
+    console.log('current Hour is: ', nowHour + ' AM or PM? ', amOrpm); // testing for if else condition for style coloring
+        $.each(timeArray, function(i, arryId){ 
+            console.log(i + ' ' + arryId); // testing each index in array       
+            // methods from dayjs API https://github.com/iamkun/dayjs/blob/dev/docs/en/API-reference.md#hour-hour
+            if (dayjs().isSame(dayjs().hour(i+9))) { $("#text"+i).addClass("present");}
+                else if (dayjs().isBefore(dayjs().hour(i+9))) {$("#text"+i).addClass("future");}
+                  else { if (dayjs().isAfter(dayjs().hour(i+9))) {$("#text"+i).addClass("past");}}                      
+        });   
+        //  nowHour=10; if (nowHour == '10') {$("#text"+8).addClass("present");} // testing code, fudge nowHour to each of the times to test
 };
 timeCheckForColorShow();
+
 
 
 
