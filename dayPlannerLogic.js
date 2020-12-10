@@ -21,6 +21,7 @@ function makeRowsAndFill() {
     var makeRow;
     var hrCol; 
     var userEntry;  
+    var saveEntry;
     for (var i = 0; i < 9; i++) {
         // var hour = dayjs().hour(i +9).format("h mm A");
         var hour = dayjs().hour(i +9).format("h A");
@@ -36,10 +37,13 @@ function makeRowsAndFill() {
         hrCol = $("<div>").addClass("hour col-1").text(timeArray[i])
         $("#rows"+i).append(hrCol);
         // add in each row a textarea for the user to enter an event in the dayPlanner 
-        // use col-10 to span across the row from 2-10 columns
+        // use col-10 to span across the row for 10 coloumns, between the 2-10 columns
         // add the style class .description from the sytle.css file
         userEntry = $("<textarea>").addClass("description col-10").attr("id", "text"+1);
         $("#rows"+i).append(userEntry);
+        // add a coloum section to each row that when clicked the user event entry will be saved & persist in localStorage
+        saveEntry = $("<button>").addClass("saveBtn col-1").html("<span class=\"far fa-save\"></span>");
+        $("#rows"+i).append(saveEntry);
         
         
         
