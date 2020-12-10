@@ -16,24 +16,35 @@ today.text(formatDate);
 
 // add the slotted times for 9am to 5pm
 // loop thru, format the dayjs time and render the html rows
-timeArray = [];
+var timeArray = [];
 function makeRowsAndFill() {
     var makeRow;
+    var hrCol;   
     for (var i = 0; i < 9; i++) {
-        var hour = dayjs().hour(i +9).format("h mm A");
+        // var hour = dayjs().hour(i +9).format("h mm A");
+        var hour = dayjs().hour(i +9).format("h A");
         console.log(hour)
         // var hour = dayjs().format('dddd, MMMM DD YYYY');
         timeArray.push(hour);
         console.log(timeArray);
-        makeRow = $("<div>").addClass("row time-block")
+        // add rows, include the 2 given classes, add #id's to each of the generaated rows named rows1, 2, 3, etc...
+        makeRow = $("<div>").addClass("row time-block").attr("id", "rows" + i)
         $(".container").append(makeRow);
+        // add in each row the hour column - styled via hour class in style.css file 
+        // hrCol = $("<div>").addClass("hour").text("Time" + hour) 
+        hrCol = $("<div>").addClass("hour").text(timeArray[i])
+        $("#rows" +i).append(hrCol);
+        
+        
+        // pseudo code for this function
+        //makeRow.append(hour, textarea, button)
+        // $(".container").append(makeRow);
+        //create div hour column here col-md-1
+        //hrCol = $("<div").addClass("col-md-1 hour")
+        //create textarea with description here col-md-1
+        //create save button here col-md-1
+
     };
-    // using bootstrap & jquerty to generate the rows
-    // function fillRows(){
-    //     makeRow = $("<div>").addClass("row time-block")
-    //     $(".container").append(makeRow);
-    // }
-    // fillRows()
 };
 
 makeRowsAndFill();

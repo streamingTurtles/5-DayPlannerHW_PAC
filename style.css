@@ -1,3 +1,4 @@
+
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
@@ -14,6 +15,7 @@ textarea{
   padding: 10px;
 }
 
+/* located in html file  */
 .jumbotron {
   text-align: center;
   background-color: transparent;
@@ -26,21 +28,21 @@ textarea{
   white-space: pre-wrap;
 }
 
+/* used in makeRowsAndFill function for makeRow var  */
 .time-block{
   text-align: center;
   border-radius: 15px;
 }
 
+/* used in makeRowsAndFill function for makeRow var  */
 .row {
   white-space: pre-wrap;
   height: 80px;
-  /* was white, I changed to see */
-  border-top: 1px solid black;  
-  /* border-color: #000000;
-  border-style: solid; */
-
+  /* changed to black to see while testing, change to white when finished */
+  border-top: 1px solid black;; 
 }
 
+/* used in makeRowsAndFill function for hrCol var */
 .hour {
   background-color: #ffffff;
   color: #000000;
@@ -77,8 +79,7 @@ textarea{
 
 
 
-/* added for testing  */
-
+/* I added to HTML to frame to see the area where Timeblocks ar to go  */
 .container {
   border-color: #000000;
   border-style: solid;
