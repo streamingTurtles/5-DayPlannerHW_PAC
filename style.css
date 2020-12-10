@@ -24,6 +24,7 @@ textarea{
   border-bottom: 10px solid black;
 }
 
+/* used in makeRowsAndFill function for userEntry variable  */
 .description{
   white-space: pre-wrap;
 }
@@ -42,7 +43,7 @@ textarea{
   border-top: 1px solid black;; 
 }
 
-/* used in makeRowsAndFill function for hrCol var */
+/* used in makeRowsAndFill function for hrCol variable */
 .hour {
   background-color: #ffffff;
   color: #000000;
@@ -79,7 +80,8 @@ textarea{
 
 
 
-/* I added to HTML to frame to see the area where Timeblocks ar to go  */
+
+/* I added some style to this class in the HTML to frame to see the area where Timeblocks ar to go  */
 .container {
   border-color: #000000;
   border-style: solid;
