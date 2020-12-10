@@ -31,13 +31,14 @@ function makeRowsAndFill() {
         // add rows, include the 2 given classes, add #id's to each of the generaated rows named rows1, 2, 3, etc...
         makeRow = $("<div>").addClass("row time-block").attr("id", "rows" + i)
         $(".container").append(makeRow);
-        // add in each row the hour column at bootstrap col-1 placement
+        // add in each row the hour column located at bootstrap col-1 placement
         // each row is styled with the given .hour class in style.css file 
         hrCol = $("<div>").addClass("hour col-1").text(timeArray[i])
         $("#rows"+i).append(hrCol);
-        // add in each row a textarea for the user to enter an event in the dayPlanner
+        // add in each row a textarea for the user to enter an event in the dayPlanner 
+        // use col-10 to span across the row from 2-10 columns
         // add the style class .description from the sytle.css file
-        userEntry = $("<textarea>").addClass("description").attr("id", "text"+1);
+        userEntry = $("<textarea>").addClass("description col-10").attr("id", "text"+1);
         $("#rows"+i).append(userEntry);
         
         
