@@ -49,7 +49,7 @@ This application is a daily day planner
 <br/>
 
 ## Screen Shots of the Application:
-![Code Quiz screenShots](.dayPlanner-Screenshot-1.png)
+![Code Quiz screenShots](dayPlanner-Screenshot-1.png)
 
 
 <br/>
