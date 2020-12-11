@@ -89,17 +89,11 @@ makeRowsAndFill();
 
 
 
-
+// bonus - to clear the local storage each day - not implemented yet 
 function clear(){
     // clear local storage when the day changes
-    saveEntry=[];
-   
+    saveEntry=[];   
 }
-
-
-
-
-
 
 
 
@@ -131,13 +125,6 @@ function timeCheckForColorShow (){
 timeCheckForColorShow();
 
 
-
-
-
-
-
-function saveContent (){
-}
 
 
 
