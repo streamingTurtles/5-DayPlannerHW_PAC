@@ -101,10 +101,23 @@ function timeCheckForColorShow (){
 timeCheckForColorShow();
 
 
+
+// NO WORKING - do not use until fixed
 // bonus - to clear the local storage each day - not implemented yet 
-function clear(){
+function clearAll(){
     // clear local storage when the day changes
-    saveEntry=[];   
+    // localStorage.removeItem(saveEntry[0]);
+    // localStorage.removeItem(saveEntry[1]);
+    // localStorage.removeItem(saveEntry[2]);
+    // localStorage.removeItem(saveEntry[3]);
+    // localStorage.removeItem(saveEntry[4]);
+    // localStorage.removeItem(saveEntry[5]);
+    // localStorage.removeItem(saveEntry[6]);
+    // localStorage.removeItem(saveEntry[7]);
+    // localStorage.removeItem(saveEntry[8]);
+    // window.localStorage.clear();
+    // saveEntry = localStorage.getItem('getUsrInput') ? JSON.parse(localStorage.getItem('getUsrInput')) : [];
+     
 }
 
 

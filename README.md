@@ -43,14 +43,19 @@ This application is a daily day planner
 4. Clicking into any of the time blocks allows the user to enter their event. (CONFIRMED)
 5. Clicking the save button will save the users text input. (CONFIRMED)
 6. Refreshing the page will keep the users entries in the time slots.  Users input is saved. (CONFIRMED)
+7. The HTML elements making up the div's that hosts the rows and columns for each of the timeslots are dynamically generated via the power of jQuery. (CONFIRMED)
 
 
 <br/>
 <br/>
 
 ## Screen Shots of the Application:
-![Code Quiz screenShots](dayPlanner-Screenshot-1.png)
+* > Screenshot showing Day Scheduler with Tasks
+* > Shows past, present & future color representation
+![Code Quiz screenShots](dayPlanner-Screenshot-2.png)
 
+* > Screenshot of Day Scheduler during off hours (outside the 9am - 5pm Work Day Scheduler)
+![Code Quiz screenShots](dayPlanner-Screenshot-1.png)
 
 <br/>
 <br/>
